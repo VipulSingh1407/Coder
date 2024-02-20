@@ -46,7 +46,7 @@ const Sidebar = () => {
       return
     }
 
-    const url = "https://codeshack.vercel.app/room/join?roomID=" + roomID
+    const url = "https://sparkedcoder.vercel.app/room/join?roomID=" + roomID
     navigator.clipboard.writeText(url)
     toast.success(`Copied room URL`)
   }
