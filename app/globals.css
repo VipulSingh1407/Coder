@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  color-scheme: dark;
+}
+
+.svg-background{
+  background-image: linear-gradient(
+    to bottom, transparent, transparent, transparent, rgb(9, 9, 11),  rgb(9, 9, 11)
+  ), url('/back.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-outline{
+  @apply focus:outline-none focus:outline-blue-800;
+}
+
+.premium-text{
+  @apply bg-clip-text bg-gradient-to-br from-yellow-700 to-yellow-300 text-transparent;
+}
+
+.cm-editor{
+  width: 100%;
+}
+
+.cm-ySelectionInfo{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-family: 0.5rem !important;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+}
