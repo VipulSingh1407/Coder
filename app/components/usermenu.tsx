@@ -16,9 +16,9 @@ export interface Props {
 const UserMenu = ({ authenticated, name, userImage, isPremium, email } : Props) => {
   return (
     authenticated ? 
-    <Menu as="div" className="relative inline-block text-left z-50">
-      <div className="w-8 h-8">
-        <Menu.Button className={`w-full h-full rounded-sm relative overflow-hidden custom-outline bg-blue-600`}>
+    <Menu as="div" className="relative bg-richblack-800 inline-block text-left z-50">
+      <div className="w-8 h-8 bg-richblack-800">
+        <Menu.Button className={`w-full h-full rounded-sm relative overflow-hidden custom-outline bg-caribbeangreen-600`}>
           <Image src={userImage ? userImage : "/default-user.png"} alt="Profile Picture" priority={true} height={32} width={32}/>
         </Menu.Button>
       </div>
@@ -32,7 +32,7 @@ const UserMenu = ({ authenticated, name, userImage, isPremium, email } : Props) 
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded bg-zinc-950 shadow-lg ring-1 ring-white ring-opacity-10 focus:outline-none">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded bg-richblack-800 shadow-lg ring-1 ring-white ring-opacity-10 focus:outline-none">
           <div className="py-1 text-slate-300">
             <Menu.Item disabled>
               <div className="block py-2 border-b border-white border-opacity-5">
@@ -77,7 +77,7 @@ const UserMenu = ({ authenticated, name, userImage, isPremium, email } : Props) 
             Login
           </li>
         </Link>
-        <Link href="/auth/signin" className="custom-outline px-4 py-2 rounded bg-blue-600 hover:cursor-pointer hover:bg-blue-500 transition-colors">
+        <Link href="/auth/signin" className="text-center font-bold px-4 py-3 rounded-md bg-caribbeangreen-200 text-black hover:bg-caribbeangreen-50 transition-colors custom-outline w-full max-w-sm">
           <li>
             Sign Up
           </li>

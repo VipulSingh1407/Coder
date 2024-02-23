@@ -51,11 +51,11 @@ const PreviewModal = ({ isOpen, setIsOpen, roomID } : any) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-zinc-900 bg-opacity-50" />
+            <div className="fixed inset-0 bg-richblack-800 bg-opacity-50" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-2 text-center">
+            <div className="flex min-h-full items-center justify-center p-2 text-center bg-richblack-800">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -65,7 +65,7 @@ const PreviewModal = ({ isOpen, setIsOpen, roomID } : any) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden border rounded border-white border-opacity-10 bg-zinc-950 p-2 text-center flex flex-col gap-2 transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden border rounded bg-richblack-700 border-white border-opacity-10 p-2 text-center flex flex-col gap-2 transition-all">
                   <Dialog.Title
                     as="h3"
                     className="w-full text-xl font-semibold sm:text-2xl text-white"
@@ -80,7 +80,7 @@ const PreviewModal = ({ isOpen, setIsOpen, roomID } : any) => {
                   <Divider text="Mic and Camera are off by default"/>
 
                   <div className="flex gap-2">
-                    <button type="button" className={`text-sm py-3 rounded border border-white border-opacity-20 text-white hover:bg-neutral-900 bg-neutral-950 transition-colors custom-outline w-full max-w-sm ${videoLoading ? 'cursor-not-allowed' : ''}`} onClick={handleClose} disabled={videoLoading}>
+                    <button type="button" className={`text-sm py-3 rounded border border-white border-opacity-20 text-white hover:bg-richblack-700 bg-richblack-800 transition-colors custom-outline w-full max-w-sm ${videoLoading ? 'cursor-not-allowed' : ''}`} onClick={handleClose} disabled={videoLoading}>
                       Close
                     </button>
                     <JoinButton roomID={roomID} disabled={videoLoading}/>

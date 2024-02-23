@@ -8,7 +8,7 @@ export interface Props {
 
 const ProviderButton = ({ provider } : Props) => {
   return (
-    <button key={provider.name} className="text-sm py-3 rounded bg-blue-600 text-white hover:bg-blue-500 transition-colors custom-outline w-full max-w-sm"  onClick={() => signIn(provider.id, { callbackUrl: '/' })}>
+    <button key={provider.name} className="text-center font-bold py-3 rounded-md bg-caribbeangreen-200 text-black hover:bg-caribbeangreen-50 transition-colors custom-outline w-full max-w-sm"  onClick={() => signIn(provider.id, { callbackUrl: '/' })}>
       Continue with { provider.name }
     </button>
   )

@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   })
 
   const payment_capture = 1
-  const amount = 2
+  const amount = 499
   const currency = "INR"
   const options = {
     amount: (amount * 100).toString(),

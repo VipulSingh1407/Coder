@@ -27,7 +27,7 @@ const ClientSide = ({ name="Anonymous" } : { name: string | undefined | null }) 
       </div>
       <Divider/>
       {isOpen && <PreviewModal isOpen={isOpen} setIsOpen={setIsOpen} roomID={roomID}/>}
-      <button className="text-sm py-3 rounded bg-blue-600 text-white hover:bg-blue-500 transition-colors custom-outline w-full max-w-sm" onClick={()=>setIsOpen(true)}>
+      <button className="text-sm py-3 rounded bg-yellow-50 text-black font-bold hover:bg-yellow-500 transition-colors custom-outline w-full max-w-sm" onClick={()=>setIsOpen(true)}>
         Preview Video
       </button>
     </>

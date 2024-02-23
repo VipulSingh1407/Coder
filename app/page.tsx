@@ -1,5 +1,5 @@
 import Image from "next/image"
-import banner from "../public/banner.png"
+import Banner from "../public/banner1.png"
 import Link from "next/link"
 import { authOptions } from "./api/auth/[...nextauth]/route"
 import { getServerSession } from "next-auth"
@@ -11,33 +11,34 @@ const features = [
   {
     title: "Online Compilation",
     content: "Run your code remotely, with support for upto 4 languages.",
-    icon: <CheckCircle2 size={18} className="inline text-green-400"/>
+    icon: <CheckCircle2 size={18} className="inline text-green-400" />
   },
   {
     title: "Video Chat",
     content: "Supports secure P2P video and audio streams.",
-    icon: <CheckCircle2 size={18} className="inline text-green-400"/>
+    icon: <CheckCircle2 size={18} className="inline text-green-400" />
   },
   {
     title: "Realtime Collaboration",
     content: "Realtime code editor powered by CodeMirror6 and Yjs.",
-    icon: <CheckCircle2 size={18} className="inline text-green-400"/>
+    icon: <CheckCircle2 size={18} className="inline text-green-400" />
   },
   {
     title: "Text Chat",
     content: "Send messages to peers via a P2P connection.",
-    icon: <CheckCircle2 size={18} className="inline text-green-400"/>
+    icon: <CheckCircle2 size={18} className="inline text-green-400" />
   },
   {
     title: "Multiple Languages",
     content: "Supports C++, Java, JavaScript and Python.",
-    icon: <CheckCircle2 size={18} className="inline text-green-400"/>
+    icon: <CheckCircle2 size={18} className="inline text-green-400" />
   },
   {
-    title: "Screen Sharing",
-    content: "Work in progress.",
-    icon: <AlertCircle size={18} className="inline text-yellow-400"/>
-  }
+    title: "Cross-Platform Compatibility",
+    content: "Ensures compatibility across wide range of  devices.",
+    icon: <CheckCircle2 size={18} className="inline text-green-400" />
+  },
+ 
 ]
 
 export default async function Home() {
@@ -51,10 +52,10 @@ export default async function Home() {
             Realtime Collaborative Coding, Video Calls and More!
           </h1>
           <p className="text-slate-300 text-xl max-w-3xl w-full break-words">
-            CodeShack supports code collaboration, peer to peer video calls, online code compilation and more.
+            CoDeveloper supports code collaboration, peer to peer video calls, online code compilation and more.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center w-full text-md gap-3 text-slate-300 max-w-lg sm:pt-4">
-            <CreateRoom authenticated={ session !==null }/>
+            <CreateRoom authenticated={session !== null} />
             <Link className="text-base py-3 rounded border border-white border-opacity-20 text-white hover:bg-neutral-900 bg-neutral-950 transition-colors custom-outline w-full max-w-sm text-center" href="/room/join">
               Join Room
             </Link>
@@ -69,13 +70,16 @@ export default async function Home() {
             </div>
             <div className="h-full w-full max-w-[260px] p-1.5 relative hidden sm:block">
               <div className="w-full h-full bg-green-600 rounded bg-opacity-10 text-green-600 text-opacity-90 flex items-center justify-center text-xs relative">
-                <p>codeshack.vercel.app</p>
-                <RotateCcw className="absolute right-2" size={13}/>
+                <p>CoDeveloper.vercel.app</p>
+                <RotateCcw className="absolute right-2" size={13} />
               </div>
             </div>
           </div>
           <div className="w-full aspect-[16/10] flex-shrink-0 flex bg-neutral-950 relative">
-            <Image src={banner} alt="banner image" placeholder="blur" fill={true}/>
+            <Image src={Banner} alt="Banner">
+
+            </Image>
+              
           </div>
         </div>
         <div className="flex w-full flex-col gap-6 sm:gap-8 items-center justify-center max-w-5xl">
@@ -83,8 +87,8 @@ export default async function Home() {
             Features
           </h2>
           <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-rows-6 grid-cols-1 gap-4 lg:gap-8 text-center">
-            {features.map((f, idx)=>{
-              return <FeatureCard title={f.title} key={idx} content={f.content} icon={f.icon}/>
+            {features.map((f, idx) => {
+              return <FeatureCard title={f.title} key={idx} content={f.content} icon={f.icon} />
             })}
           </div>
         </div>
@@ -93,46 +97,43 @@ export default async function Home() {
             Pricing
           </h2>
           <div className="w-full grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 grid-cols-1 gap-4 lg:gap-8 text-center">
-            <div className="border cursor-pointer border-white border-opacity-20 hover:bg-neutral-900 hover:border-opacity-40 transition-colors rounded flex flex-col items-center justify-center gap-4 bg-neutral-900/20 p-4">
+            <div className="border cursor-pointer border-white border-opacity-20 hover:bg-neutral-900 hover:border-opacity-40 transition-colors rounded flex flex-col items-center justify-center gap-4 bg-richblack-800 p-4">
               <div className="w-full">
                 <h3 className="text-2xl">Freemium</h3>
                 <p className="text-4xl font-bold">Free</p>
                 <p className="text-sm text-slate-300">Forever</p>
               </div>
               <ul className="flex flex-col gap-2 items-center justify-center text-xl">
-                <li className="flex items-center justify-center gap-1"><XCircle size={18} className="inline text-red-400"/>Default username</li>
-                <li className="flex items-center justify-center gap-1"><XCircle size={18} className="inline text-red-400"/>6 Concurrent users in rooms</li>
-                <li className="flex items-center justify-center gap-1"><XCircle size={18} className="inline text-red-400"/>Default profile picture</li>
+                <li className="flex items-center justify-center gap-1"><XCircle size={18} className="inline text-red-400" />Default username</li>
+                <li className="flex items-center justify-center gap-1"><XCircle size={18} className="inline text-red-400" />6 Concurrent users in rooms</li>
+                <li className="flex items-center justify-center gap-1"><XCircle size={18} className="inline text-red-400" />Default profile picture</li>
               </ul>
             </div>
-            <Link href="/premium" className="border border-white border-opacity-20 hover:bg-neutral-900 hover:border-opacity-40 transition-colors rounded flex flex-col items-center justify-center gap-4 bg-neutral-900/20 p-4">
+            <Link href="/premium" className="border border-white border-opacity-20 hover:bg-neutral-900 hover:border-opacity-40 transition-colors rounded flex flex-col items-center justify-center gap-4 bg-richblack-800 p-4">
               <div className="w-full">
                 <h3 className="text-2xl premium-text">Premium</h3>
-                <p className="text-4xl font-bold"><span className="font-normal">&#36;</span> 4.99</p>
-                <p className="text-sm text-slate-300">Lifetime membership</p>
+                <p className="text-4xl font-bold"><span className="font-normal">&#8377;</span>499</p>
+                <p className="text-sm text-slate-300">Yearly membership</p>
               </div>
               <ul className="flex flex-col gap-2 items-center justify-center text-xl">
-                <li className="flex items-center justify-center gap-1"><CheckCircle2 size={18} className="inline text-green-400"/>Customizable username</li>
-                <li className="flex items-center justify-center gap-1"><CheckCircle2 size={18} className="inline text-green-400"/>16 Concurrent users in rooms</li>
-                <li className="flex items-center justify-center gap-1"><CheckCircle2 size={18} className="inline text-green-400"/>Customizable profile picture</li>
+                <li className="flex items-center justify-center gap-1"><CheckCircle2 size={18} className="inline text-green-400" />Customizable username</li>
+                <li className="flex items-center justify-center gap-1"><CheckCircle2 size={18} className="inline text-green-400" />16 Concurrent users in rooms</li>
+                <li className="flex items-center justify-center gap-1"><CheckCircle2 size={18} className="inline text-green-400" />Customizable profile picture</li>
               </ul>
             </Link>
           </div>
-          <p className="text-xl text-slate-300">
-            Payments are in testing mode. Razorpay rejected my KYC 🥺.
-          </p>
         </div>
-        <div className="flex w-full flex-col gap-4 items-center justify-center max-w-5xl">
+        {/* <div className="flex w-full flex-col gap-4 items-center justify-center max-w-5xl">
           <h2 className="text-4xl font-semibold">
             Contribute
           </h2>
           <p className="text-slate-300 text-xl max-w-2xl w-full break-words">
             CodeShack is an open source project, checkout the <a className="custom-outline underline decoration-blue-600 decoration-2 hover:text-white transition-colors" href="https://github.com/shadyy41/codeshack" target="_blank" rel="noopener noreferrer">Github repo</a> for contributing.
           </p>
-        </div>
+        </div> */}
 
         <div className="w-full max-w-5xl flex items-center justify-center pb-8 pt-8 text-slate-300">
-          <p className="text-base">Built with Next.js by <a className="custom-outline underline decoration-blue-600 decoration-2 hover:text-white transition-colors" href="https://shady41.vercel.app/" target="_blank" rel="noopener noreferrer">Abhinav Anand</a></p>
+          <p className="text-base">Built  by <a className="custom-outline underline decoration-caribbeangreen-200 decoration-2 hover:text-white transition-colors" href="https://vipul1portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Vipul Singh</a></p>
         </div>
       </div>
     </div>

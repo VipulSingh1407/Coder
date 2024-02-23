@@ -15,7 +15,7 @@ const JoinButton = ({ roomID, disabled } : { roomID: string | null, disabled?: b
   }
 
   return (
-    <Link className={`text-sm py-3 rounded bg-blue-600 text-white hover:bg-blue-500 transition-colors custom-outline w-full max-w-sm flex items-center justify-center`} href={`/room/${roomID}`} prefetch={false}>
+    <Link className={`text-sm py-3 rounded bg-caribbeangreen-200 text-black font-bold hover:bg-caribbeangreen-50 transition-colors custom-outline w-full max-w-sm flex items-center justify-center`} href={`/room/${roomID}`} prefetch={false}>
       Join Room
     </Link>
   )

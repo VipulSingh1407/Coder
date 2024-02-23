@@ -18,7 +18,7 @@ const UserData = async () => {
       </div>
       <div>
       <FormHeader text={ name ? name : "Username" }/>
-      { isPremium ? <p className="text-sm w-full px-4 premium-text font-medium">Premium User</p> : <p className="text-sm w-full px-4 text-slate-300 font-medium">{ isPremium ? "Premium User" : "Free User"}</p>}
+      { isPremium ? <p className="text-sm w-full px-4 premium-text font-bold">Premium User</p> : <p className="text-sm w-full px-4 text-slate-300 font-medium">{ isPremium ? "Premium User" : "Free User"}</p>}
       </div>
     </div>
   )

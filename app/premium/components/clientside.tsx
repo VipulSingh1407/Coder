@@ -82,24 +82,24 @@ const ClientSide = ({ authenticated, isPremium }: Props) => {
   }
 
   return (
-    <div className="h-full w-full flex items-center justify-center px-8 sm:px-0 text-center py-6">
+    <div className="h-full w-full flex bg-richblack-900 items-center justify-center px-8 sm:px-0 text-center py-6">
       <Script
         id="razorpay-checkout-js"
         src="https://checkout.razorpay.com/v1/checkout.js"
       />
-      <div className="h-fit w-full max-w-sm border rounded border-white border-opacity-10 flex flex-col items-center justify-start p-2 bg-zinc-950 gap-2">
+      <div className="h-fit w-full max-w-sm border rounded border-white bg-richblack-800 border-opacity-10 flex flex-col items-center justify-start p-2  gap-2">
         <h1 className="text-xl font-bold sm:text-2xl premium-text">Premium</h1>
         <Divider text="Lifetime Access"/>
         <div className="flex gap-1 flex-col w-full py-3">
           <p className="text-slate-200 text-4xl font-medium">
-            <span className="font-thin">&#36;</span>4.99
+            <span className="font-thin">&#8377;</span>499
           </p>
           <p className="text-lg text-slate-300 w-full flex flex-col">
             Customized username, profile pictures, and more.
           </p>
         </div>
         <Divider text="Powered by Razorpay"/>
-        <button className={`text-sm py-3 rounded bg-blue-600 text-white hover:bg-blue-500 ${loading ? 'cursor-wait' : ''} transition-colors custom-outline w-full max-w-sm flex items-center justify-center`} onClick={makePayment} disabled={loading}>
+        <button className={`text-sm py-3 rounded bg-caribbeangreen-200 text-white hover:bg-caribbeangreen-50 ${loading ? 'cursor-wait' : ''} transition-colors custom-outline w-full max-w-sm flex items-center justify-center`} onClick={makePayment} disabled={loading}>
           {loading ?  <Spinner/>  : 'Join Premium'}
         </button>
         <BackButton/>

@@ -16,7 +16,7 @@ const font = FontFamily({
 const Logo = ({ showText }:Props) => {
   return (
     <Link href={"/"} className={`custom-outline ${font.className} text-2xl`}>
-      <span className="text-blue-600">{"<"}</span>{ showText ? "codeshack" : ""}<span className="text-blue-600">{"/>"}</span>
+      <span className="text-caribbeangreen-200">{"<"}</span>{ showText ? "CoDeveloper" : ""}<span className="text-caribbeangreen-200">{"/>"}</span>
       {/* <Image src={logoSvg} alt="codeshack-logo" height={28}/> */}
     </Link>
   )

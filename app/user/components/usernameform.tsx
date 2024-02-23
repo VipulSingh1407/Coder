@@ -37,7 +37,7 @@ const UsernameForm = ({ name, isPremium, email }: Props) => {
         <div className="flex w-full gap-2">
           {/*@ts-ignore*/}
           <input type="text" name="name" value={name_s} onChange={handleChange} placeholder="Edit Username"  disabled={ !isPremium || pending } className={`text-sm w-full text-slate-300 py-3 px-4 rounded border border-white border-opacity-20 hover:border-opacity-40 transition-colors custom-outline bg-transparent backdrop-blur-sm ${ !isPremium && 'cursor-not-allowed' } ${ pending && 'cursor-wait' }`}/>
-          <button disabled={ !isPremium || pending || name===name_s } className={`text-sm py-3 w-28 rounded bg-blue-600 text-white hover:bg-blue-500 transition-colors custom-outline ${ (!isPremium || name===name_s) && 'cursor-not-allowed bg-blue-500' } ${ pending && 'cursor-wait' } flex items-center justify-center`} onClick={handleSubmit}>
+          <button disabled={ !isPremium || pending || name===name_s } className={`text-sm py-3 w-28 rounded bg-blue-600 text-white hover:bg-caribbeangreen-50 transition-colors custom-outline ${ (!isPremium || name===name_s) && 'cursor-not-allowed bg-caribbeangreen-200' } ${ pending && 'cursor-wait' } flex items-center justify-center`} onClick={handleSubmit}>
             {pending ? <Spinner/> : 'Update'}
           </button>
         </div>

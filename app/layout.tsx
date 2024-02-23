@@ -37,7 +37,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any"/>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png"sizes="180x180"/>
       </head>
-      <body className="bg-zinc-950 text-slate-100 h-full flex flex-col">
+      <body className="bg-richblack-900 text-slate-100 h-full flex flex-col">
         <AuthContext>
           <NextTopLoader showSpinner={false} shadow={false} height={3} color='#2563EB'/>
           {/* @ts-ignore */}

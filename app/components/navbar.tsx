@@ -11,7 +11,7 @@ const Navbar = async () => {
   const isPremium = session?.user?.isPremium
 
   return (
-    <nav className="px-8 py-3 flex items-center justify-between sm:px-14 flex-shrink-0 border-b border-white border-opacity-10">
+    <nav className="px-8 py-3 flex  bg-richblack-900 items-center justify-between sm:px-14 flex-shrink-0 border-b border-white border-opacity-20">
       <Logo showText={true}/>
       <UserMenu authenticated={ session!==null } name={ name } userImage = { userImage } isPremium = { isPremium } email = { email }/>
     </nav>

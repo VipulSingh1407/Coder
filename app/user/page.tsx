@@ -20,7 +20,7 @@ const User = async () => {
   if(!session) redirect('/')
 
   return (
-    <div className="h-full w-full flex flex-col items-start justify-start bg-zinc-950 gap-4 px-3 py-3 text-start">
+    <div className="h-full w-full flex flex-col items-start justify-start bg-richblack-700 gap-4 px-3 py-3 text-start">
       {
         !isPremium && 
         <>
