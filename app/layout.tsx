@@ -20,10 +20,10 @@ const font = FontFamily({
 
 export const metadata = {
   title: {
-    default: 'CodeShack',
-    template: '%s | CodeShack',
+    default: 'CoDeveloper',
+    template: '%s | CoDeveloper',
   },
-  description: 'P2P Video calling app.',
+  description: 'P2P Video calling coding app.',
 }
 
 export default function RootLayout({
